@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Привет!</h1>
+<h1>Это домашняя страница "sh"</h1>
+<h1>Введите контактную информацию:</h1>
+<form method="post">
+    {% csrf_token %}
+    <input placeholder="name" name="name" /><br>
+    <input placeholder="email" name="email" type="email" /><br>
+    <input placeholder="phone" name="phone"/><br>
+    <textarea placeholder="full name" name="full_name"></textarea><br>
+    <input type="submit" value="Submit!" />
+</form>
+</body>
+</html>
