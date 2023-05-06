@@ -4,9 +4,10 @@ from catalog.apps import CatalogConfig
 from catalog.views import index, home, contacts
 
 app_name = CatalogConfig.name       # здесь можно: app_name = 'catalog'
+# app_name = 'catalog'
 
 urlpatterns = [
     path('', index),
-    path('', home),
-    path('', contacts),
+    path('home/', home),
+    path('contacts/', contacts),
 ]
