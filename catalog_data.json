@@ -1,0 +1,70 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Юбилейные монеты",
+      "description": "Монеты, посвященные круглым датам"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "name": "Монеты Европы",
+      "description": "Монеты, выпущенные в Европе"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+      "name": "Монета 10 рублей 2003 года",
+      "description": "СПМД «Древние города России — Муром» (Артикул K11-89063",
+      "preview": "",
+      "category": 1,
+      "purchase_price": 150,
+      "creation_date": "2023-05-10T16:31:51.396Z",
+      "last_modified_date": "2023-05-10T16:31:51.396Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "name": "Монета 10 рублей 2000 года",
+      "description": "ММД «55 лет Великой Победы» (Артикул K11-88397)",
+      "preview": "",
+      "category": 1,
+      "purchase_price": 50,
+      "creation_date": "2023-05-10T16:32:36.805Z",
+      "last_modified_date": "2023-05-10T16:32:36.805Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "name": "Монета 2 евро 2023 года",
+      "description": "Германия «1275 лет со дня рождения Карла Великого» (Артикул M2-62505)",
+      "preview": "",
+      "category": 2,
+      "purchase_price": 325,
+      "creation_date": "2023-05-10T16:33:30.414Z",
+      "last_modified_date": "2023-05-10T16:33:30.414Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "name": "Монета 10 евро 2002 года",
+      "description": "Испания «XIX зимние Олимпийские Игры 2002 в Солт-Лейк-Сити» (Артикул M2-62501)",
+      "preview": "",
+      "category": 2,
+      "purchase_price": 3500,
+      "creation_date": "2023-05-10T16:34:13.338Z",
+      "last_modified_date": "2023-05-10T16:34:13.338Z"
+    }
+  }
+]
