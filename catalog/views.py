@@ -53,6 +53,15 @@ def card(request):
     return render(request, 'catalog/card.html', context)
 
 
+def cards(request):
+    context = {
+        'category_list': Category.objects.all(),
+        'object_list': Product.objects.all(),
+        'title': 'Список монет'
+    }
+    return render(request, 'catalog/cards.html', context)
+
+
 def coin(request, pk):
     coin_item = Product.objects.get(pk=pk)
     context = {
