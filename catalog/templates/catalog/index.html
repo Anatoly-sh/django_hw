@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Привет!!!</h1>
-</body>
-</html>
+{% extends "catalog/base.html" %}
+
+{% block content %}
+<h1>Электронный бутик</h1>
+
+  <p>Добро пожаловать в <em>Электронный бутик</em>, сайт на Django в учебных целях</p>
+
+<h2>На витрине</h2>
+
+  <p>Представлены следующие товары:</p>
+  <ul>
+    <li><strong>Товаров:</strong> {{ num_products }}</li>
+    <li><strong>В категориях:</strong> {{ num_categories }}</li>
+  </ul>
+
+{% endblock %}
