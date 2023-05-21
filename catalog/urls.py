@@ -8,9 +8,9 @@ app_name = CatalogConfig.name       # здесь можно: app_name = 'catalog
 
 urlpatterns = [
     path('index/', index, name='index'),
+    path('contacts/', contacts, name='contacts'),
+    path('cards/', cards, name='cards'),
+    path('coin/<int:pk>/', coin, name='coin_item'),
     path('home/', home),
-    path('contacts/', contacts),
-    path('card/', card),
-    path('cards/', cards),
-    path('coin/<int:pk>/', coin, name='coin_item')
+    path('card/', card)
 ]

@@ -1,0 +1,15 @@
+{% extends "catalog/base.html" %}
+
+{% block content %}
+        <div class="col">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="440" height="440">
+            <h2>{{ object.name }}</h2>
+            <p>Описание изделия: {{ object.description }}</p>
+            <p>Категория: {{ object.category }}</p>
+            <b><p>Стоимость: {{ object.purchase_price }}</p></b>
+            <p>Дата создания: {{ object.creation_date }}</p>
+            <p>Дата последнего изменения: {{ object.last_modified_date }}</p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.col -->
+{% endblock %}

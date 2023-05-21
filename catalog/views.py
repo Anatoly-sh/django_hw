@@ -59,7 +59,7 @@ def cards(request):
         'object_list': Product.objects.all(),
         'title': 'Список монет'
     }
-    return render(request, 'catalog/cards.html', context)
+    return render(request, 'catalog/produkt_cards.html', context)
 
 
 def coin(request, pk):
