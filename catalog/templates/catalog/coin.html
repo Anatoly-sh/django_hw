@@ -3,13 +3,17 @@
 {% block content %}
         <div class="col">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="440" height="440">
+            <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}"
+                 alt="Generic placeholder image" width="500" height="500">
             <h2>{{ object.name }}</h2>
             <p>Описание изделия: {{ object.description }}</p>
             <p>Категория: {{ object.category }}</p>
-            <b><p>Стоимость: {{ object.purchase_price }}</p></b>
+            <b>Стоимость: {{ object.purchase_price }}</b>
             <p>Дата создания: {{ object.creation_date }}</p>
             <p>Дата последнего изменения: {{ object.last_modified_date }}</p>
+            <div class="card-footer">
+                <a href="{% url 'catalog:cards' %}" class="btn btn-primary"><< Назад</a>
+            </div>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.col -->
 {% endblock %}
