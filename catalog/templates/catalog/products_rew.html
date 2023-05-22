@@ -1,12 +1,16 @@
 {% extends "catalog/base.html" %}
 
 {% block content %}
+    {% load tags_filters %}
         <main role="main">
         <!-- Three columns of text below the carousel -->
         <div class="row">
             {% for object in object_list %}
               <div class="col-lg-2">
-                <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}" alt="Generic placeholder image" width="140" height="140">
+{#                <img class="rounded-circle" src="/media/{{ object.preview }}" alt="Generic placeholder image" width="140" height="140">#}
+{#                <img class="rounded-circle" src="{{ object.preview|media_path }}" alt="Generic placeholder image" width="140" height="140">#}
+                <img class="rounded-circle" src="{% media_path object.preview %}" alt="Generic placeholder image" width="140" height="140">
+{#                <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}" alt="Generic placeholder image" width="140" height="140">#}
                 <p>{{ object.name }}</p>
                 <p>Категория: {{ object.category }}</p>
                 <p><a class="btn btn-secondary" href="{% url 'catalog:coin_item' object.pk %}" role="button">Подробнее &raquo;</a></p>
