@@ -24,8 +24,7 @@ def index(request):
     return render(request, 'catalog/index.html', context)
 
 
-def home(request):
-    return render(request, 'catalog/home.html')
+# class
 
 
 def contacts(request):
@@ -50,16 +49,16 @@ def card(request):
         'object_list': Product.objects.all(),
         'title': 'Список монет'
     }
-    return render(request, 'catalog/card.html', context)
-
-
-def cards(request):
-    context = {
-        'category_list': Category.objects.all(),
-        'object_list': Product.objects.all(),
-        'title': 'Список монет'
-    }
     return render(request, 'catalog/products_rew.html', context)
+
+
+# def cards(request):
+#     context = {
+#         'category_list': Category.objects.all(),
+#         'object_list': Product.objects.all(),
+#         'title': 'Список монет'
+#     }
+#     return render(request, 'catalog/products_rew.html', context)
 
 
 def coin(request, pk):
