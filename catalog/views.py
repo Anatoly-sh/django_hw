@@ -1,6 +1,8 @@
 from pprint import pprint
 
+from django.db.models import Index
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
 
 from catalog.models import Product, Category
 
@@ -24,7 +26,8 @@ def index(request):
     return render(request, 'catalog/index.html', context)
 
 
-# class
+# class IndexListView(ListView):
+#     model = Category, Product
 
 
 def contacts(request):
@@ -43,13 +46,17 @@ def contacts(request):
     return render(request, 'catalog/contacts.html', context)
 
 
-def card(request):
-    context = {
-        'category_list': Category.objects.all(),
-        'object_list': Product.objects.all(),
-        'title': 'Список монет'
-    }
-    return render(request, 'catalog/products_rew.html', context)
+# def card(request):
+#     context = {
+#         'category_list': Category.objects.all(),
+#         'object_list': Product.objects.all(),
+#         'title': 'Список монет'
+#     }
+#     return render(request, 'catalog/product_list.html', context)
+
+
+class ProductListView(ListView):
+    model = Product
 
 
 # def cards(request):
@@ -58,14 +65,19 @@ def card(request):
 #         'object_list': Product.objects.all(),
 #         'title': 'Список монет'
 #     }
-#     return render(request, 'catalog/products_rew.html', context)
+#     return render(request, 'catalog/product_list.html', context)
 
 
-def coin(request, pk):
-    coin_item = Product.objects.get(pk=pk)
-    context = {
-        'object': coin_item,
-        'title': coin_item
-    }
-    return render(request, 'catalog/coin.html', context)
+# def coin(request, pk):
+#     coin_item = Product.objects.get(pk=pk)
+#     context = {
+#         'object': coin_item,
+#         'title': coin_item
+#     }
+#     return render(request, 'catalog/product_detail.html', context)
+
+
+class ProductDetailView(DetailView):
+    model = Product
+
 

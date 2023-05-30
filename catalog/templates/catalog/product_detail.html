@@ -8,11 +8,11 @@
             <h2>{{ object.name }}</h2>
             <p>Описание изделия: {{ object.description }}</p>
             <p>Категория: {{ object.category }}</p>
-            <b>Стоимость: {{ object.purchase_price }}</b>
+            <b>Стоимость: {{ object.purchase_price }} руб.</b>
             <p>Дата создания: {{ object.creation_date }}</p>
             <p>Дата последнего изменения: {{ object.last_modified_date }}</p>
             <div class="card-footer">
-                <a href="{% url 'catalog:product_rew' %}" class="btn btn-primary"><< Назад</a>
+                <a href="{% url 'catalog:product_list' %}" class="btn btn-primary"><< Назад</a>
             </div>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.col -->
