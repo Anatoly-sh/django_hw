@@ -34,3 +34,21 @@ class Product(models.Model):
         verbose_name_plural = 'изделия'
         ordering = ('name',)
 
+
+class BlogRecord(models.Model):
+    title = models.CharField(max_length=150, verbose_name='Заголовок')
+    slug = models.SlugField(max_length=100, unique=True,  verbose_name='Slug')
+    context = models.TextField(verbose_name='Содержимое')
+    preview = models.ImageField(upload_to='blog_rec/', max_length=100, verbose_name='Изображение', **NULLABLE)
+    create_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
+    published = models.BooleanField(default=False, verbose_name='Признак публикации')
+    view_count = models.IntegerField(default=0, verbose_name='Количество просмотров')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'статья'
+        verbose_name_plural = 'статьи'
+
+
