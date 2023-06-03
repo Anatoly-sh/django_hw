@@ -1,0 +1,31 @@
+{% extends "catalog/base.html" %}
+
+{% block content %}
+    {% load tags_filters %}
+{#        <main role="main">#}
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Заголовок</th>
+              <th scope="col">Изображение</th>
+              <th scope="col">Количество просмотров</th>
+            </tr>
+          </thead>
+          {% for object in object_list %}
+                {% if object.published %}
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ object.id }}</th>
+                      <td>{{ object.title }}</td>
+                      <td>
+                          <img src="{% media_path object.preview %}" class="rounded mx-auto d-block" alt="" height="70">
+                      </td>
+                      <td>{{ object.view_count }}</td>
+                      <td><a class="btn btn-secondary" href="{% url 'catalog:blog-record_detail' object.pk %}" role="button">Подробнее &raquo;</a></td>
+                    </tr>
+                  </tbody>
+                {% endif %}
+            {% endfor %}
+        </table>
+{% endblock %}

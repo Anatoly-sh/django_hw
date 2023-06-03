@@ -13,7 +13,7 @@
 {#                <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}" alt="Generic placeholder image" width="140" height="140">#}
                 <p>{{ object.name }}</p>
                 <p>Категория: {{ object.category }}</p>
-                <p><a class="btn btn-secondary" href="{% url 'catalog:coin_item' object.pk %}" role="button">Подробнее &raquo;</a></p>
+                <p><a class="btn btn-secondary" href="{% url 'catalog:product_detail' object.pk %}" role="button">Подробнее &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
             {% endfor %}
         </div><!-- /.row -->

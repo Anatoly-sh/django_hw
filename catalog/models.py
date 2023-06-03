@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -37,8 +38,8 @@ class Product(models.Model):
 
 class BlogRecord(models.Model):
     title = models.CharField(max_length=150, verbose_name='Заголовок')
-    slug = models.SlugField(max_length=100, unique=True,  verbose_name='Slug')
-    context = models.TextField(verbose_name='Содержимое')
+    slug = models.SlugField(max_length=100, unique=True, db_index=True, verbose_name='Slug')
+    content = models.TextField(verbose_name='Содержимое')
     preview = models.ImageField(upload_to='blog_rec/', max_length=100, verbose_name='Изображение', **NULLABLE)
     create_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     published = models.BooleanField(default=False, verbose_name='Признак публикации')
@@ -50,5 +51,8 @@ class BlogRecord(models.Model):
     class Meta:
         verbose_name = 'статья'
         verbose_name_plural = 'статьи'
+
+    def get_absolute_url(self):
+        return reverse('blog-record_list', args=[str(self.id)])
 
 

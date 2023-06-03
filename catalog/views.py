@@ -1,10 +1,11 @@
 from pprint import pprint
 
 from django.db.models import Index
-from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from catalog.models import Product, Category
+from catalog.models import Product, Category, BlogRecord
 
 
 # Create your views here.
@@ -58,26 +59,53 @@ def contacts(request):
 class ProductListView(ListView):
     model = Product
 
-
-# def cards(request):
-#     context = {
-#         'category_list': Category.objects.all(),
-#         'object_list': Product.objects.all(),
-#         'title': 'Список монет'
-#     }
-#     return render(request, 'catalog/product_list.html', context)
-
-
-# def coin(request, pk):
-#     coin_item = Product.objects.get(pk=pk)
-#     context = {
-#         'object': coin_item,
-#         'title': coin_item
-#     }
-#     return render(request, 'catalog/product_detail.html', context)
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['category_list'] = Category.objects.all()
+    #     return context
 
 
 class ProductDetailView(DetailView):
     model = Product
 
+# -------------------------------------------------------------------
 
+
+class BlogRecordListView(ListView):
+    model = BlogRecord
+    queryset = BlogRecord.objects.filter(published=True)
+
+
+class BlogRecordDetailView(DetailView):
+    model = BlogRecord
+
+    def get_object(self, queryset=None):
+        obj = super().get_object(queryset=queryset)
+        obj.view_count = obj.view_count + 1
+        obj.save()
+        return obj
+
+
+class BlogRecordCreateView(CreateView):
+    model = BlogRecord
+    fields = ('title', 'content', 'preview', 'published')
+    success_url = reverse_lazy('catalog:record_list')
+
+
+class BlogRecordUpdateView(UpdateView):
+    model = BlogRecord
+    fields = ('title', 'slug', 'content', 'preview', 'published', 'view_count')
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
+
+
+class BlogRecordDeleteView(DeleteView):
+    model = BlogRecord
+    success_url = reverse_lazy('catalog:record_list')
+
+
+def toggle_activity(request, slug):
+    record_item = get_object_or_404(BlogRecord, slug=slug)
+    record_item.toggle_published()
+    return redirect(reverse('catalog_app:record_detail', args=[record_item.slug]))
