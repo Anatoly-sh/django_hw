@@ -65,3 +65,6 @@ class BlogRecord(models.Model):
             self.slug = slugify(transliterated_title, allow_unicode=True)
         super().save(*args, **kwargs)
 
+    def toggle_published(self):
+        self.published = not self.published
+        self.save()

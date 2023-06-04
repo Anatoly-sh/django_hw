@@ -7,7 +7,7 @@
             <img src="{% media_path object.preview %}" class="card-img-top mx-auto d-block" alt=""
                      style="width: 500px; height: 500px;">
             <h2>{{ object.title }}</h2>
-            <p>Текст статьи: {{ object.content }}</p>
+            <p>Текст статьи: {{ object.content|truncatechars:100 }}</p>
             <p>Дата создания: {{ object.create_date }}</p>
             <p>Признак публикации: {{ object.published }}</p>
             <p>Количество просмотров: {{ object.view_count }}</p>
@@ -15,7 +15,7 @@
                 <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-primary"><< Все записи</a>
                 <a href="{% url 'catalog:blog-record_update' object.pk %}" class="btn btn-warning">Изменить запись</a>
                 <a href="{% url 'catalog:blog-record_delete' object.pk %}" class="btn btn-danger">Удалить запись</a>
-                <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-outline-danger">Снять с
+                <a href="{% url 'catalog:toggle_activity' object.pk %}" class="btn btn-outline-danger">Снять с
                     публикации</a>
             </div>
           </div><!-- /.col-lg-4 -->

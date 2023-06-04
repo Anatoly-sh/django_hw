@@ -2,7 +2,7 @@ from pprint import pprint
 
 from django.db.models import Index
 from django.shortcuts import render, get_object_or_404, redirect
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from catalog.models import Product, Category, BlogRecord
@@ -105,7 +105,7 @@ class BlogRecordDeleteView(DeleteView):
     success_url = reverse_lazy('catalog:blog-record_list')
 
 
-def toggle_activity(request, slug):
-    record_item = get_object_or_404(BlogRecord, slug=slug)
+def toggle_activity(request, pk):
+    record_item = get_object_or_404(BlogRecord, pk=pk)
     record_item.toggle_published()
-    return redirect(reverse('catalog_app:record_detail', args=[record_item.slug]))
+    return redirect(reverse('catalog:blog-record_list'))
