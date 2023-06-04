@@ -1,5 +1,8 @@
 from django.db import models
 from django.urls import reverse
+from django.utils.text import slugify
+from transliterate import translit
+
 
 NULLABLE = {'blank': True, 'null': True}
 
@@ -55,4 +58,9 @@ class BlogRecord(models.Model):
     def get_absolute_url(self):
         return reverse('blog-record_list', args=[str(self.id)])
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            transliterated_title = translit(self.title, 'ru', reversed=True)
+            self.slug = slugify(transliterated_title, allow_unicode=True)
+        super().save(*args, **kwargs)
 

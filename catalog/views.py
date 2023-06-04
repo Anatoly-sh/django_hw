@@ -89,7 +89,7 @@ class BlogRecordDetailView(DetailView):
 class BlogRecordCreateView(CreateView):
     model = BlogRecord
     fields = ('title', 'content', 'preview', 'published')
-    success_url = reverse_lazy('catalog:record_list')
+    success_url = reverse_lazy('catalog:blog-record_list')
 
 
 class BlogRecordUpdateView(UpdateView):
@@ -105,7 +105,7 @@ class BlogRecordDeleteView(DeleteView):
     success_url = reverse_lazy('catalog:record_list')
 
 
-def toggle_activity(request, slug):
-    record_item = get_object_or_404(BlogRecord, slug=slug)
-    record_item.toggle_published()
-    return redirect(reverse('catalog_app:record_detail', args=[record_item.slug]))
+# def toggle_activity(request, slug):
+#     record_item = get_object_or_404(BlogRecord, slug=slug)
+#     record_item.toggle_published()
+#     return redirect(reverse('catalog_app:record_detail', args=[record_item.slug]))

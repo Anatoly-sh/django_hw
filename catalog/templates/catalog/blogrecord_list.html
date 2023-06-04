@@ -28,4 +28,7 @@
                 {% endif %}
             {% endfor %}
         </table>
+    <div class="card-footer">
+        <a href="{% url 'catalog:blog-record_create' %}" class="btn btn-primary">Добавить запись</a>
+    </div>
 {% endblock %}

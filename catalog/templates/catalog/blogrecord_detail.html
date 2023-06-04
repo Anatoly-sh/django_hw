@@ -1,10 +1,11 @@
 {% extends "catalog/base.html" %}
 
 {% block content %}
+    {% load tags_filters %}
         <div class="col">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}"
-                 alt="Generic placeholder image" width="500" height="500">
+            <img src="{% media_path object.preview %}" class="card-img-top mx-auto d-block" alt=""
+                     style="width: 500px; height: 500px;">
             <h2>{{ object.title }}</h2>
             <p>Текст статьи: {{ object.content }}</p>
             <p>Дата создания: {{ object.create_date }}</p>
