@@ -1,6 +1,3 @@
-from pprint import pprint
-
-from django.db.models import Index
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -27,10 +24,6 @@ def index(request):
     return render(request, 'catalog/index.html', context)
 
 
-# class IndexListView(ListView):
-#     model = Category, Product
-
-
 def contacts(request):
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -47,22 +40,8 @@ def contacts(request):
     return render(request, 'catalog/contacts.html', context)
 
 
-# def card(request):
-#     context = {
-#         'category_list': Category.objects.all(),
-#         'object_list': Product.objects.all(),
-#         'title': 'Список монет'
-#     }
-#     return render(request, 'catalog/product_list.html', context)
-
-
 class ProductListView(ListView):
     model = Product
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['category_list'] = Category.objects.all()
-    #     return context
 
 
 class ProductDetailView(DetailView):
@@ -105,7 +84,7 @@ class BlogRecordDeleteView(DeleteView):
     success_url = reverse_lazy('catalog:blog-record_list')
 
 
-def toggle_activity(request, pk):
-    record_item = get_object_or_404(BlogRecord, pk=pk)
+def toggle_activity(request, slug):
+    record_item = get_object_or_404(BlogRecord, slug=slug)
     record_item.toggle_published()
     return redirect(reverse('catalog:blog-record_list'))

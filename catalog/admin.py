@@ -4,8 +4,6 @@ from catalog.models import Product, Category, BlogRecord
 
 
 # Register your models here.
-# admin.site.register(Product)
-# admin.site.register(Category)
 
 
 @admin.register(Category)

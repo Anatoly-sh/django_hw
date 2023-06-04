@@ -5,21 +5,17 @@ from catalog.views import contacts, index, ProductListView, ProductDetailView, B
     BlogRecordCreateView, BlogRecordUpdateView, BlogRecordDeleteView, toggle_activity
 
 app_name = CatalogConfig.name       # здесь можно: app_name = 'catalog'
-# app_name = 'catalog'
 
 urlpatterns = [
     path('', index, name='index'),
     path('index/', index, name='index'),
     path('contacts/', contacts, name='contacts'),
-    # path('cards/', cards, name='cards'),
     path('product_list/', ProductListView.as_view(), name='product_list'),
     path('coin/<int:pk>/', ProductDetailView.as_view(), name='product_detail'),
-    # path('home/', home),
-    # path('card/', card),
     path('blogrecord_list/', BlogRecordListView.as_view(), name='blog-record_list'),
     path('blogrecord_create/', BlogRecordCreateView.as_view(), name='blog-record_create'),
-    path('blogrecord_apdate/<int:pk>/', BlogRecordUpdateView.as_view(), name='blog-record_update'),
-    path('blogrecord_delete/<int:pk>/', BlogRecordDeleteView.as_view(), name='blog-record_delete'),
-    path('blogrecord_detail/<int:pk>/', BlogRecordDetailView.as_view(), name='blog-record_detail'),
-    path('toggle/<int:pk>/', toggle_activity, name='toggle_activity')
+    path('blogrecord_apdate/<slug:slug>/', BlogRecordUpdateView.as_view(), name='blog-record_update'),
+    path('blogrecord_delete/<slug:slug>/', BlogRecordDeleteView.as_view(), name='blog-record_delete'),
+    path('blogrecord_detail/<slug:slug>/', BlogRecordDetailView.as_view(), name='blog-record_detail'),
+    path('toggle/<slug:slug>/', toggle_activity, name='toggle_activity')
 ]

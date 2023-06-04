@@ -13,9 +13,9 @@
             <p>Количество просмотров: {{ object.view_count }}</p>
             <div class="card-footer">
                 <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-primary"><< Все записи</a>
-                <a href="{% url 'catalog:blog-record_update' object.pk %}" class="btn btn-warning">Изменить запись</a>
-                <a href="{% url 'catalog:blog-record_delete' object.pk %}" class="btn btn-danger">Удалить запись</a>
-                <a href="{% url 'catalog:toggle_activity' object.pk %}" class="btn btn-outline-danger">Снять с
+                <a href="{% url 'catalog:blog-record_update' object.slug %}" class="btn btn-warning">Изменить запись</a>
+                <a href="{% url 'catalog:blog-record_delete' object.slug %}" class="btn btn-danger">Удалить запись</a>
+                <a href="{% url 'catalog:toggle_activity' object.slug %}" class="btn btn-outline-danger">Снять с
                     публикации</a>
             </div>
           </div><!-- /.col-lg-4 -->

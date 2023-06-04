@@ -57,7 +57,7 @@ class BlogRecord(models.Model):
 
     def get_absolute_url(self):
         # return reverse('blog-record_detail', args=[str(self.id)])
-        return reverse('catalog:blog-record_detail', kwargs={'pk': self.pk})
+        return reverse('catalog:blog-record_detail', kwargs={'slug': self.slug})
 
     def save(self, *args, **kwargs):
         if not self.slug:
