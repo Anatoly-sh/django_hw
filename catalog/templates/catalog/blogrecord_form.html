@@ -2,10 +2,11 @@
 {% block content %}
         <div class="col">
           <div class="col-lg-4">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data"> <!-- иначе данные разбиваются на части -->
                 {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" class="btn btn-success" value="Создать"><br><br>
+                {{ form.as_p}}
+                <input type="submit" class="btn btn-success"
+                       value="{% if object %}Сохранить{% else %}Создать{% endif %}"><br><br>
             </form>
             <div class="card-footer">
                 <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-primary"><< Все записи</a>

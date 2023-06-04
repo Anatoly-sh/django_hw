@@ -43,7 +43,7 @@ class BlogRecord(models.Model):
     title = models.CharField(max_length=150, verbose_name='Заголовок')
     slug = models.SlugField(max_length=100, unique=True, db_index=True, verbose_name='Slug')
     content = models.TextField(verbose_name='Содержимое')
-    preview = models.ImageField(upload_to='blog_rec/', max_length=100, verbose_name='Изображение', **NULLABLE)
+    preview = models.ImageField(upload_to='blogrecord/', max_length=100, verbose_name='Изображение', **NULLABLE)
     create_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     published = models.BooleanField(default=False, verbose_name='Признак публикации')
     view_count = models.IntegerField(default=0, verbose_name='Количество просмотров')
@@ -56,7 +56,8 @@ class BlogRecord(models.Model):
         verbose_name_plural = 'статьи'
 
     def get_absolute_url(self):
-        return reverse('blog-record_list', args=[str(self.id)])
+        # return reverse('blog-record_detail', args=[str(self.id)])
+        return reverse('catalog:blog-record_detail', kwargs={'pk': self.pk})
 
     def save(self, *args, **kwargs):
         if not self.slug:

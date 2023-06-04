@@ -13,7 +13,7 @@
             <p>Количество просмотров: {{ object.view_count }}</p>
             <div class="card-footer">
                 <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-primary"><< Все записи</a>
-                <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-warning">Изменить запись</a>
+                <a href="{% url 'catalog:blog-record_update' object.pk %}" class="btn btn-warning">Изменить запись</a>
                 <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-danger">Удалить запись</a>
                 <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-outline-danger">Снять с
                     публикации</a>
