@@ -102,7 +102,7 @@ class BlogRecordUpdateView(UpdateView):
 
 class BlogRecordDeleteView(DeleteView):
     model = BlogRecord
-    success_url = reverse_lazy('catalog:record_list')
+    success_url = reverse_lazy('catalog:blog-record_list')
 
 
 def toggle_activity(request, slug):

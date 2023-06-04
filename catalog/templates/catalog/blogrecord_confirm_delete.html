@@ -1,0 +1,15 @@
+{% extends "catalog/base.html" %}
+{% block content %}
+        <div class="col">
+          <div class="col-lg-4">
+            <form method="post">
+                {% csrf_token %}
+                Уверены, что хотите удалить запись "{{ object }}"?
+                <input type="submit" class="btn btn-outline-danger" value="Уверен"><br><br>
+            </form>
+{#            <div class="card-footer">#}
+{#                <a href="{% url 'catalog:blog-record_list' %}" class="btn btn-primary"><< Все записи</a>#}
+{#            </div>#}
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.col -->
+{% endblock %}
