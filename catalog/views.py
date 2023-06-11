@@ -2,42 +2,70 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from catalog.models import Product, Category, BlogRecord
+from catalog.models import Product, Category, BlogRecord, Contacts
 
 
 # Create your views here.
 
+class MainListView(ListView):
+    model = Product
+    template_name = 'catalog/index.html'
 
-def index(request):
-    """
-    Отображение домашней страницы
-    """
-    # Формирование параметров каталога из БД
-    num_categories = Category.objects.all().count()
-    num_products = Product.objects.all().count()
-    context = {'num_categories': num_categories,
-               'num_products': num_products,
-               'title': 'Главная'
-               }
+    def get_context_data(self, *args, **kwargs):
+        context = super(MainListView, self).get_context_data(*args, **kwargs)
+        context['category_objects'] = Category.objects.all().count()     # в шаблоне переменная {{ category_objects }}
+        return context
 
-    # Отрисовка HTML-шаблона index.html с данными внутри переменной контекста
-    return render(request, 'catalog/index.html', context)
+# fbv:
+# def index(request):
+#     """
+#     Отображение домашней страницы
+#     """
+#     # Формирование параметров каталога из БД
+#     num_categories = Category.objects.all().count()
+#     num_products = Product.objects.all().count()
+#     context = {'num_categories': num_categories,
+#                'num_products': num_products,
+#                'title': 'Главная'
+#                }
+#
+#     # Отрисовка HTML-шаблона index.html с данными внутри переменной контекста
+#     return render(request, 'catalog/index.html', context)
 
 
-def contacts(request):
-    if request.method == 'POST':
+class ContactCreateView(CreateView):
+    template_name = 'catalog/contacts.html'
+
+    def get(self, request, *args, **kwargs):
+        contacts_info = Contacts.objects.all()
+        return render(request, self.template_name, {'contacts_info': contacts_info})
+
+    def post(self, request, *args, **kwargs):
         name = request.POST.get('name')
-        email = request.POST.get('email')
         phone = request.POST.get('phone')
+        email = request.POST.get('email')
         full_name = request.POST.get('full_name')
-        print(f'Зарегистрирован пользователь {full_name} \n'
-              f'с именем: {name}, \n'
-              f'электронная почта: {email}, \n'
-              f'телефон: {phone}\n')
-    context = {
-        'title': 'Контакты'
-    }
-    return render(request, 'catalog/contacts.html', context)
+        # в БД пока не пишем (выполнить миграцию!)
+        # contact = Contacts(name=name, phone=phone, email=email, full_name=full_name)
+        # contact.save()
+        print(f'Новый контакт: {name} ({phone} / {email} / {full_name})')
+        return render(request, 'catalog/contacts.html')     # вернуться в другой шаблон
+
+
+# def contacts(request):
+#     if request.method == 'POST':
+#         name = request.POST.get('name')
+#         email = request.POST.get('email')
+#         phone = request.POST.get('phone')
+#         full_name = request.POST.get('full_name')
+#         print(f'Зарегистрирован пользователь {full_name} \n'
+#               f'с именем: {name}, \n'
+#               f'электронная почта: {email}, \n'
+#               f'телефон: {phone}\n')
+#     context = {
+#         'title': 'Контакты'
+#     }
+#     return render(request, 'catalog/contacts.html', context)
 
 
 class ProductListView(ListView):

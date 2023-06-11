@@ -68,3 +68,18 @@ class BlogRecord(models.Model):
     def toggle_published(self):
         self.published = not self.published
         self.save()
+
+
+class Contacts(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Имя пользователя')
+    email = models.CharField(max_length=50, verbose_name='Электронная почта')
+    phone = models.CharField(max_length=15, verbose_name='Телефон')
+    full_name = models.CharField(max_length=100, verbose_name='Полное имя', **NULLABLE)
+
+    def __str__(self):
+        return f'{self.name} / {self.phone}'
+
+    class Meta:
+        verbose_name = 'контакт'
+        verbose_name_plural = 'контакты'
+        ordering = ('name',)
