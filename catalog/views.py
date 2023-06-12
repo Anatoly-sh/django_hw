@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
+from catalog.forms import ProductForm
 from catalog.models import Product, Category, BlogRecord, Contacts
 
 
@@ -13,8 +14,9 @@ class MainListView(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(MainListView, self).get_context_data(*args, **kwargs)
-        context['category_objects'] = Category.objects.all().count()     # в шаблоне переменная {{ category_objects }}
+        context['category_objects'] = Category.objects.all().count()  # в шаблоне переменная {{ category_objects }}
         return context
+
 
 # fbv:
 # def index(request):
@@ -49,7 +51,7 @@ class ContactCreateView(CreateView):
         # contact = Contacts(name=name, phone=phone, email=email, full_name=full_name)
         # contact.save()
         print(f'Новый контакт: {name} ({phone} / {email} / {full_name})')
-        return render(request, 'catalog/contacts.html')     # вернуться в другой шаблон
+        return render(request, 'catalog/contacts.html')  # вернуться в другой шаблон
 
 
 # def contacts(request):
@@ -74,6 +76,29 @@ class ProductListView(ListView):
 
 class ProductDetailView(DetailView):
     model = Product
+
+
+# -------------------------------------------------------------------
+
+'''
+Создание продукта с использованием форм
+'''
+
+
+class ProductCreateView(CreateView):
+    model = Product
+    form_class = ProductForm
+
+
+'''
+Редактирование продукта с использованием форм
+'''
+
+
+class ProductUpdateView(UpdateView):
+    model = Product
+    form_class = ProductForm
+
 
 # -------------------------------------------------------------------
 
