@@ -38,6 +38,9 @@ class Product(models.Model):
         verbose_name_plural = 'изделия'
         ordering = ('name',)
 
+    def get_absolute_url(self):
+        return reverse('catalog:product_detail', kwargs={'pk': self.pk})
+
 
 class BlogRecord(models.Model):
     title = models.CharField(max_length=150, verbose_name='Заголовок')

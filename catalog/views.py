@@ -100,6 +100,16 @@ class ProductUpdateView(UpdateView):
     form_class = ProductForm
 
 
+'''
+Удаление продукта
+'''
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('catalog:product_list')
+
+
 # -------------------------------------------------------------------
 
 

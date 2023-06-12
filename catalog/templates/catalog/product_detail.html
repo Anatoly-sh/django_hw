@@ -1,10 +1,13 @@
 {% extends "catalog/base.html" %}
 
 {% block content %}
+    {% load tags_filters %}
         <div class="col">
           <div class="col-lg-4">
-            <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}"
-                 alt="Generic placeholder image" width="500" height="500">
+            <img src="{% media_path object.preview %}" class="card-img-top mx-auto d-block" alt=""
+                     style="width: 500px; height: 500px;">
+{#            <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}"#}
+{#                 alt="Generic placeholder image" width="500" height="500">#}
             <h2>{{ object.name }}</h2>
             <p>Описание изделия: {{ object.description }}</p>
             <p>Категория: {{ object.category }}</p>
@@ -12,8 +15,10 @@
             <p>Дата создания: {{ object.creation_date }}</p>
             <p>Дата последнего изменения: {{ object.last_modified_date }}</p>
             <div class="card-footer">
-                <a href="{% url 'catalog:product_list' %}" class="btn btn-primary"><< Назад</a>
-            </div>
+                <a href="{% url 'catalog:product_list' %}" class="btn btn-primary"><< Все товары</a>
+                <a href="{% url 'catalog:product_update' object.pk %}" class="btn btn-warning">Изменить товар</a>
+                <a href="{% url 'catalog:product_delete' object.pk %}" class="btn btn-danger">Удалить товар</a>
+             </div>
           </div><!-- /.col-lg-4 -->
         </div><!-- /.col -->
 {% endblock %}
