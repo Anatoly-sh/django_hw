@@ -1,0 +1,37 @@
+{% extends "catalog/base.html" %}
+{% block content %}
+    <div class="col">
+    <form method="post" enctype="multipart/form-data"> <!-- иначе данные разбиваются на части -->
+
+    <div class="col">
+          <div class="col-lg-4">
+                {% csrf_token %}
+                {{ form.as_p}}
+                <input type="submit" class="btn btn-success"
+                       value="{% if object %}Сохранить{% else %}Создать{% endif %}"><br><br>
+            <div class="card-footer">
+                <a href="{% url 'catalog:product_list' %}" class="btn btn-primary"><< Все товары</a>
+            </div>
+          </div>
+        </div>
+
+    <div class="col">
+          <div class="col-lg-4">
+              <div class="card-header">
+                    Версия:
+                </div>
+              <div class="card-body">
+                  <table class="table">
+                      {{ formset.management_form }}
+                      {% for form in formset.forms %}
+                        <tr class="subject-form">
+                            {{ form.as_p }}
+                        </tr>
+                      {% endfor %}
+                  </table>
+                </div>
+          </div>
+        </div>
+    </form>
+    </div>
+{% endblock %}

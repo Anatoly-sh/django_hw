@@ -13,6 +13,13 @@
 {#                <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}" alt="Generic placeholder image" width="140" height="140">#}
                 <p>{{ object.name }}</p>
                 <p>Категория: {{ object.category }}</p>
+                  <td>
+                    {% for version in object.version_set.all %}
+                        {% if version.version_is_active %}
+                            <div><strong>Активная версия:</strong> {{ version.version_name }} - версия {{ version.version_number }}</div>
+                        {% endif %}
+                    {% endfor %}
+                  </td>
                 <p><a class="btn btn-secondary" href="{% url 'catalog:product_detail' object.pk %}" role="button">Подробнее &raquo;</a></p>
               </div><!-- /.col-lg-4 -->
             {% endfor %}
