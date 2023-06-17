@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'catalog.apps.CatalogConfig',   # Можно просто catalog
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
+
+EMAIL_HOST = 'smtp.yandex.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'somemail@yandex.ru'
+EMAIL_HOST_PASSWORD = 'secret'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
+
+AUTH_USER_MODEL = 'users.User'
