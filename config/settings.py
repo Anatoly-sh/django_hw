@@ -138,11 +138,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
 
-EMAIL_HOST = 'smtp.yandex.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'somemail@yandex.ru'
-EMAIL_HOST_PASSWORD = 'secret'
+EMAIL_HOST_USER = 'anatoly.shapovalov1957@yandex.ru'
+EMAIL_HOST_PASSWORD = 'daqueczkyftxwynk'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 AUTH_USER_MODEL = 'users.User'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
