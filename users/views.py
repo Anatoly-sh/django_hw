@@ -1,5 +1,5 @@
-from django.contrib.auth.views import PasswordResetView, PasswordResetConfirmView, PasswordResetDoneView, \
-    PasswordResetCompleteView
+from django.contrib.auth.views import PasswordResetView, PasswordResetConfirmView, \
+    PasswordResetDoneView, PasswordResetCompleteView, LoginView
 from django.core.mail import send_mail
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -50,3 +50,8 @@ class MyPasswordResetDoneView(PasswordResetDoneView):
 
 class MyPasswordResetCompleteView(PasswordResetCompleteView):
     template_name = 'users/password_reset_complete.html'
+
+
+class MyLoginView(LoginView):
+    pass
+
