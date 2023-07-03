@@ -3,63 +3,63 @@
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
-      "action_time": "2023-05-10T16:31:51.399Z",
+      "action_time": "2023-06-20T15:44:50.944Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Монета 10 рублей 2003 года / 150 : Юбилейные монеты",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "sh@sh.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 2,
     "fields": {
-      "action_time": "2023-05-10T16:32:36.807Z",
+      "action_time": "2023-06-20T15:45:26.329Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "2",
-      "object_repr": "Монета 10 рублей 2000 года / 50 : Юбилейные монеты",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "111@111.sh",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 3,
     "fields": {
-      "action_time": "2023-05-10T16:33:30.416Z",
+      "action_time": "2023-06-20T15:46:04.788Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "3",
-      "object_repr": "Монета 2 евро 2023 года / 325 : Монеты Европы",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 4,
     "fields": {
-      "action_time": "2023-05-10T16:34:13.340Z",
+      "action_time": "2023-06-20T16:48:52.506Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "4",
-      "object_repr": "Монета 10 евро 2002 года / 3500 : Монеты Европы",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+      "content_type": 11,
+      "object_id": "6",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 5,
     "fields": {
-      "action_time": "2023-05-10T17:57:38.246Z",
+      "action_time": "2023-06-20T17:14:38.290Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "5",
-      "object_repr": "Монета 10 евро 2002 года / 3500 : Монеты Европы",
+      "content_type": 11,
+      "object_id": "8",
+      "object_repr": "asdfghj@yandex.ru",
       "action_flag": 3,
       "change_message": ""
     }
@@ -68,11 +68,11 @@
     "model": "admin.logentry",
     "pk": 6,
     "fields": {
-      "action_time": "2023-05-10T19:32:31.171Z",
+      "action_time": "2023-06-20T17:14:38.294Z",
       "user": 1,
-      "content_type": 8,
-      "object_id": "8",
-      "object_repr": "Монеты Европы",
+      "content_type": 11,
+      "object_id": "7",
+      "object_repr": "anatoly.shapovalov@gmail.com",
       "action_flag": 3,
       "change_message": ""
     }
@@ -81,11 +81,11 @@
     "model": "admin.logentry",
     "pk": 7,
     "fields": {
-      "action_time": "2023-05-10T19:32:31.181Z",
+      "action_time": "2023-06-20T17:21:50.334Z",
       "user": 1,
-      "content_type": 8,
-      "object_id": "7",
-      "object_repr": "Юбилейные монеты",
+      "content_type": 11,
+      "object_id": "9",
+      "object_repr": "anatoly.shapovalov@gmail.com",
       "action_flag": 3,
       "change_message": ""
     }
@@ -94,11 +94,11 @@
     "model": "admin.logentry",
     "pk": 8,
     "fields": {
-      "action_time": "2023-05-10T19:33:12.379Z",
+      "action_time": "2023-06-20T17:22:35.784Z",
       "user": 1,
-      "content_type": 8,
+      "content_type": 11,
       "object_id": "10",
-      "object_repr": "Монеты Европы",
+      "object_repr": "anatoly.shapovalov@gmail.com",
       "action_flag": 3,
       "change_message": ""
     }
@@ -107,11 +107,11 @@
     "model": "admin.logentry",
     "pk": 9,
     "fields": {
-      "action_time": "2023-05-10T19:33:12.384Z",
+      "action_time": "2023-06-20T17:24:41.690Z",
       "user": 1,
-      "content_type": 8,
-      "object_id": "9",
-      "object_repr": "Юбилейные монеты",
+      "content_type": 11,
+      "object_id": "11",
+      "object_repr": "anatoly.shapovalov@gmail.com",
       "action_flag": 3,
       "change_message": ""
     }
@@ -120,11 +120,11 @@
     "model": "admin.logentry",
     "pk": 10,
     "fields": {
-      "action_time": "2023-05-10T19:33:47.189Z",
+      "action_time": "2023-06-20T17:35:33.704Z",
       "user": 1,
-      "content_type": 8,
+      "content_type": 11,
       "object_id": "12",
-      "object_repr": "Монеты Европы",
+      "object_repr": "anatoly.shapovalov@gmail.com",
       "action_flag": 3,
       "change_message": ""
     }
@@ -133,11 +133,11 @@
     "model": "admin.logentry",
     "pk": 11,
     "fields": {
-      "action_time": "2023-05-10T19:33:47.194Z",
+      "action_time": "2023-06-20T17:37:04.886Z",
       "user": 1,
-      "content_type": 8,
-      "object_id": "11",
-      "object_repr": "Юбилейные монеты",
+      "content_type": 11,
+      "object_id": "13",
+      "object_repr": "anatoly.shapovalov@gmail.com",
       "action_flag": 3,
       "change_message": ""
     }
@@ -146,115 +146,115 @@
     "model": "admin.logentry",
     "pk": 12,
     "fields": {
-      "action_time": "2023-05-21T08:36:26.001Z",
+      "action_time": "2023-06-20T17:58:50.302Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "4",
-      "object_repr": "Монета 10 евро 2002 года / 3500 : Монеты Европы",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+      "content_type": 11,
+      "object_id": "14",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 13,
     "fields": {
-      "action_time": "2023-05-21T08:38:13.836Z",
+      "action_time": "2023-06-20T18:07:59.013Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "2",
-      "object_repr": "Монета 10 рублей 2000 года / 50 : Юбилейные монеты",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+      "content_type": 11,
+      "object_id": "15",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 14,
     "fields": {
-      "action_time": "2023-05-21T08:38:28.903Z",
+      "action_time": "2023-06-20T18:09:06.813Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Монета 10 рублей 2003 года / 150 : Юбилейные монеты",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+      "content_type": 11,
+      "object_id": "16",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 15,
     "fields": {
-      "action_time": "2023-05-21T08:38:53.738Z",
+      "action_time": "2023-06-20T18:52:23.035Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "3",
-      "object_repr": "Монета 2 евро 2023 года / 325 : Монеты Европы",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+      "content_type": 11,
+      "object_id": "17",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 16,
     "fields": {
-      "action_time": "2023-05-22T17:10:36.627Z",
+      "action_time": "2023-06-20T18:53:55.368Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "4",
-      "object_repr": "Монета 10 евро 2002 года / 3500 : Монеты Европы",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+      "content_type": 11,
+      "object_id": "18",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 17,
     "fields": {
-      "action_time": "2023-05-22T17:11:14.681Z",
+      "action_time": "2023-06-20T19:17:06.736Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "2",
-      "object_repr": "Монета 10 рублей 2000 года / 50 : Юбилейные монеты",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+      "content_type": 11,
+      "object_id": "19",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 18,
     "fields": {
-      "action_time": "2023-05-22T17:11:30.080Z",
+      "action_time": "2023-06-20T19:21:53.646Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Монета 10 рублей 2003 года / 150 : Юбилейные монеты",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+      "content_type": 11,
+      "object_id": "20",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 19,
     "fields": {
-      "action_time": "2023-05-22T17:11:48.377Z",
+      "action_time": "2023-06-20T19:25:19.455Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "3",
-      "object_repr": "Монета 2 евро 2023 года / 325 : Монеты Европы",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
+      "content_type": 11,
+      "object_id": "21",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 20,
     "fields": {
-      "action_time": "2023-05-24T15:22:52.471Z",
+      "action_time": "2023-06-20T19:33:04.156Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "4",
-      "object_repr": "Монета 10 евро 2002 года / 3500 : Монеты Европы",
+      "content_type": 11,
+      "object_id": "22",
+      "object_repr": "anatoly.shapovalov1957@yandex.ru",
       "action_flag": 3,
       "change_message": ""
     }
@@ -263,11 +263,11 @@
     "model": "admin.logentry",
     "pk": 21,
     "fields": {
-      "action_time": "2023-05-24T15:22:58.672Z",
+      "action_time": "2023-06-20T19:34:38.781Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "2",
-      "object_repr": "Монета 10 рублей 2000 года / 50 : Юбилейные монеты",
+      "content_type": 11,
+      "object_id": "23",
+      "object_repr": "anatoly.shapovalov1957@yandex.ru",
       "action_flag": 3,
       "change_message": ""
     }
@@ -276,11 +276,11 @@
     "model": "admin.logentry",
     "pk": 22,
     "fields": {
-      "action_time": "2023-05-24T15:23:04.181Z",
+      "action_time": "2023-06-20T20:06:03.257Z",
       "user": 1,
-      "content_type": 7,
-      "object_id": "1",
-      "object_repr": "Монета 10 рублей 2003 года / 150 : Юбилейные монеты",
+      "content_type": 11,
+      "object_id": "24",
+      "object_repr": "anatoly.shapovalov1957@yandex.ru",
       "action_flag": 3,
       "change_message": ""
     }
@@ -289,11 +289,11 @@
     "model": "admin.logentry",
     "pk": 23,
     "fields": {
-      "action_time": "2023-05-24T15:23:16.167Z",
+      "action_time": "2023-06-20T20:20:48.431Z",
       "user": 1,
-      "content_type": 8,
-      "object_id": "2",
-      "object_repr": "Монеты Европы",
+      "content_type": 11,
+      "object_id": "25",
+      "object_repr": "anatoly.shapovalov@gmail.com",
       "action_flag": 3,
       "change_message": ""
     }
@@ -302,11 +302,11 @@
     "model": "admin.logentry",
     "pk": 24,
     "fields": {
-      "action_time": "2023-05-24T15:23:21.022Z",
+      "action_time": "2023-06-20T20:22:52.823Z",
       "user": 1,
-      "content_type": 8,
-      "object_id": "1",
-      "object_repr": "Юбилейные монеты",
+      "content_type": 11,
+      "object_id": "26",
+      "object_repr": "anatoly.shapovalov@gmail.com",
       "action_flag": 3,
       "change_message": ""
     }
@@ -315,24 +315,24 @@
     "model": "admin.logentry",
     "pk": 25,
     "fields": {
-      "action_time": "2023-06-01T18:59:57.781Z",
+      "action_time": "2023-06-20T20:24:52.790Z",
       "user": 1,
-      "content_type": 9,
-      "object_id": "1",
-      "object_repr": "Монета 2010 года",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
+      "content_type": 11,
+      "object_id": "27",
+      "object_repr": "anatoly.shapovalov@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
     }
   },
   {
     "model": "admin.logentry",
     "pk": 26,
     "fields": {
-      "action_time": "2023-06-01T19:03:15.990Z",
+      "action_time": "2023-06-21T19:22:32.742Z",
       "user": 1,
-      "content_type": 9,
-      "object_id": "2",
-      "object_repr": "Статья #2",
+      "content_type": 11,
+      "object_id": "29",
+      "object_repr": "shaplen@list.ru",
       "action_flag": 1,
       "change_message": "[{\"added\": {}}]"
     }
@@ -341,455 +341,13 @@
     "model": "admin.logentry",
     "pk": 27,
     "fields": {
-      "action_time": "2023-06-01T19:04:36.011Z",
+      "action_time": "2023-06-22T16:48:23.918Z",
       "user": 1,
-      "content_type": 9,
-      "object_id": "3",
-      "object_repr": "Статья 3",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 28,
-    "fields": {
-      "action_time": "2023-06-04T08:12:56.623Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "4",
-      "object_repr": "lkjhbsdc",
+      "content_type": 11,
+      "object_id": "28",
+      "object_repr": "anatoly.shapovalov1957@yandex.ru",
       "action_flag": 3,
       "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 29,
-    "fields": {
-      "action_time": "2023-06-04T08:15:06.193Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "10",
-      "object_repr": "Статья 4",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 30,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.357Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "17",
-      "object_repr": "444",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 31,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.363Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "16",
-      "object_repr": "333",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 32,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.365Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "15",
-      "object_repr": "222",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 33,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.365Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "14",
-      "object_repr": "111",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 34,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.366Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "11",
-      "object_repr": "ййй",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 35,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.367Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "10",
-      "object_repr": "Статья 4",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 36,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.368Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "3",
-      "object_repr": "Статья 3",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 37,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.369Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "2",
-      "object_repr": "Статья #2",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 38,
-    "fields": {
-      "action_time": "2023-06-04T12:33:00.370Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "1",
-      "object_repr": "Монета 2010 года",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 39,
-    "fields": {
-      "action_time": "2023-06-04T12:33:35.674Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "18",
-      "object_repr": "111 111",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 40,
-    "fields": {
-      "action_time": "2023-06-04T13:04:51.443Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "19",
-      "object_repr": "222",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 41,
-    "fields": {
-      "action_time": "2023-06-04T17:11:28.280Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "23",
-      "object_repr": "444 444",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 42,
-    "fields": {
-      "action_time": "2023-06-04T17:11:28.284Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "21",
-      "object_repr": "222 222",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 43,
-    "fields": {
-      "action_time": "2023-06-04T17:11:43.630Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "24",
-      "object_repr": "111 111",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 44,
-    "fields": {
-      "action_time": "2023-06-04T17:13:30.598Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "26",
-      "object_repr": "111 111",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 45,
-    "fields": {
-      "action_time": "2023-06-04T17:18:53.841Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "30",
-      "object_repr": "222 222",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 46,
-    "fields": {
-      "action_time": "2023-06-04T17:22:04.163Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "29",
-      "object_repr": "111 111",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 47,
-    "fields": {
-      "action_time": "2023-06-04T17:56:37.684Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "32",
-      "object_repr": "222 222",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 48,
-    "fields": {
-      "action_time": "2023-06-04T17:56:37.688Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "31",
-      "object_repr": "111 111",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 49,
-    "fields": {
-      "action_time": "2023-06-07T17:26:52.737Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "37",
-      "object_repr": "test for slug",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 50,
-    "fields": {
-      "action_time": "2023-06-07T17:27:25.304Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "37",
-      "object_repr": "test for slug",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 51,
-    "fields": {
-      "action_time": "2023-06-07T17:28:24.837Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "37",
-      "object_repr": "test for slug",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 52,
-    "fields": {
-      "action_time": "2023-06-07T17:29:05.229Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "37",
-      "object_repr": "test for slug",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\", \"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u0438\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 53,
-    "fields": {
-      "action_time": "2023-06-07T17:29:20.229Z",
-      "user": 1,
-      "content_type": 9,
-      "object_id": "37",
-      "object_repr": "test for slug",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u0438\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 54,
-    "fields": {
-      "action_time": "2023-06-08T19:33:05.798Z",
-      "user": 1,
-      "content_type": 3,
-      "object_id": "1",
-      "object_repr": "Admin_b",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 55,
-    "fields": {
-      "action_time": "2023-06-09T07:16:35.491Z",
-      "user": 1,
-      "content_type": 3,
-      "object_id": "2",
-      "object_repr": "Admin_user",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 56,
-    "fields": {
-      "action_time": "2023-06-09T07:16:45.379Z",
-      "user": 1,
-      "content_type": 3,
-      "object_id": "2",
-      "object_repr": "Admin_user",
-      "action_flag": 2,
-      "change_message": "[]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 57,
-    "fields": {
-      "action_time": "2023-06-09T07:17:37.183Z",
-      "user": 1,
-      "content_type": 3,
-      "object_id": "2",
-      "object_repr": "Admin_user",
-      "action_flag": 3,
-      "change_message": ""
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 58,
-    "fields": {
-      "action_time": "2023-06-09T07:19:43.408Z",
-      "user": 1,
-      "content_type": 4,
-      "object_id": "2",
-      "object_repr": "Test_user",
-      "action_flag": 1,
-      "change_message": "[{\"added\": {}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 59,
-    "fields": {
-      "action_time": "2023-06-09T07:20:32.246Z",
-      "user": 1,
-      "content_type": 4,
-      "object_id": "2",
-      "object_repr": "Test_user",
-      "action_flag": 2,
-      "change_message": "[]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 60,
-    "fields": {
-      "action_time": "2023-06-09T07:24:45.367Z",
-      "user": 1,
-      "content_type": 4,
-      "object_id": "2",
-      "object_repr": "Test_user",
-      "action_flag": 2,
-      "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
-    }
-  },
-  {
-    "model": "admin.logentry",
-    "pk": 61,
-    "fields": {
-      "action_time": "2023-06-13T16:46:57.481Z",
-      "user": 1,
-      "content_type": 7,
-      "object_id": "20",
-      "object_repr": "qqq / 33333 : Монеты Европы",
-      "action_flag": 2,
-      "change_message": "[]"
     }
   },
   {
@@ -904,108 +462,108 @@
     "model": "auth.permission",
     "pk": 13,
     "fields": {
-      "name": "Can add user",
+      "name": "Can add content type",
       "content_type": 4,
-      "codename": "add_user"
+      "codename": "add_contenttype"
     }
   },
   {
     "model": "auth.permission",
     "pk": 14,
     "fields": {
-      "name": "Can change user",
+      "name": "Can change content type",
       "content_type": 4,
-      "codename": "change_user"
+      "codename": "change_contenttype"
     }
   },
   {
     "model": "auth.permission",
     "pk": 15,
     "fields": {
-      "name": "Can delete user",
+      "name": "Can delete content type",
       "content_type": 4,
-      "codename": "delete_user"
+      "codename": "delete_contenttype"
     }
   },
   {
     "model": "auth.permission",
     "pk": 16,
     "fields": {
-      "name": "Can view user",
+      "name": "Can view content type",
       "content_type": 4,
-      "codename": "view_user"
+      "codename": "view_contenttype"
     }
   },
   {
     "model": "auth.permission",
     "pk": 17,
     "fields": {
-      "name": "Can add content type",
+      "name": "Can add session",
       "content_type": 5,
-      "codename": "add_contenttype"
+      "codename": "add_session"
     }
   },
   {
     "model": "auth.permission",
     "pk": 18,
     "fields": {
-      "name": "Can change content type",
+      "name": "Can change session",
       "content_type": 5,
-      "codename": "change_contenttype"
+      "codename": "change_session"
     }
   },
   {
     "model": "auth.permission",
     "pk": 19,
     "fields": {
-      "name": "Can delete content type",
+      "name": "Can delete session",
       "content_type": 5,
-      "codename": "delete_contenttype"
+      "codename": "delete_session"
     }
   },
   {
     "model": "auth.permission",
     "pk": 20,
     "fields": {
-      "name": "Can view content type",
+      "name": "Can view session",
       "content_type": 5,
-      "codename": "view_contenttype"
+      "codename": "view_session"
     }
   },
   {
     "model": "auth.permission",
     "pk": 21,
     "fields": {
-      "name": "Can add session",
+      "name": "Can add категория",
       "content_type": 6,
-      "codename": "add_session"
+      "codename": "add_category"
     }
   },
   {
     "model": "auth.permission",
     "pk": 22,
     "fields": {
-      "name": "Can change session",
+      "name": "Can change категория",
       "content_type": 6,
-      "codename": "change_session"
+      "codename": "change_category"
     }
   },
   {
     "model": "auth.permission",
     "pk": 23,
     "fields": {
-      "name": "Can delete session",
+      "name": "Can delete категория",
       "content_type": 6,
-      "codename": "delete_session"
+      "codename": "delete_category"
     }
   },
   {
     "model": "auth.permission",
     "pk": 24,
     "fields": {
-      "name": "Can view session",
+      "name": "Can view категория",
       "content_type": 6,
-      "codename": "view_session"
+      "codename": "view_category"
     }
   },
   {
@@ -1048,195 +606,144 @@
     "model": "auth.permission",
     "pk": 29,
     "fields": {
-      "name": "Can add категория",
+      "name": "Can add статья",
       "content_type": 8,
-      "codename": "add_category"
+      "codename": "add_blogrecord"
     }
   },
   {
     "model": "auth.permission",
     "pk": 30,
     "fields": {
-      "name": "Can change категория",
+      "name": "Can change статья",
       "content_type": 8,
-      "codename": "change_category"
+      "codename": "change_blogrecord"
     }
   },
   {
     "model": "auth.permission",
     "pk": 31,
     "fields": {
-      "name": "Can delete категория",
+      "name": "Can delete статья",
       "content_type": 8,
-      "codename": "delete_category"
+      "codename": "delete_blogrecord"
     }
   },
   {
     "model": "auth.permission",
     "pk": 32,
     "fields": {
-      "name": "Can view категория",
+      "name": "Can view статья",
       "content_type": 8,
-      "codename": "view_category"
+      "codename": "view_blogrecord"
     }
   },
   {
     "model": "auth.permission",
     "pk": 33,
     "fields": {
-      "name": "Can add статья",
+      "name": "Can add контакт",
       "content_type": 9,
-      "codename": "add_blogrecord"
+      "codename": "add_contacts"
     }
   },
   {
     "model": "auth.permission",
     "pk": 34,
     "fields": {
-      "name": "Can change статья",
+      "name": "Can change контакт",
       "content_type": 9,
-      "codename": "change_blogrecord"
+      "codename": "change_contacts"
     }
   },
   {
     "model": "auth.permission",
     "pk": 35,
     "fields": {
-      "name": "Can delete статья",
+      "name": "Can delete контакт",
       "content_type": 9,
-      "codename": "delete_blogrecord"
+      "codename": "delete_contacts"
     }
   },
   {
     "model": "auth.permission",
     "pk": 36,
     "fields": {
-      "name": "Can view статья",
+      "name": "Can view контакт",
       "content_type": 9,
-      "codename": "view_blogrecord"
+      "codename": "view_contacts"
     }
   },
   {
     "model": "auth.permission",
     "pk": 37,
     "fields": {
-      "name": "Can add контакт",
+      "name": "Can add версия",
       "content_type": 10,
-      "codename": "add_contacts"
+      "codename": "add_version"
     }
   },
   {
     "model": "auth.permission",
     "pk": 38,
     "fields": {
-      "name": "Can change контакт",
+      "name": "Can change версия",
       "content_type": 10,
-      "codename": "change_contacts"
+      "codename": "change_version"
     }
   },
   {
     "model": "auth.permission",
     "pk": 39,
     "fields": {
-      "name": "Can delete контакт",
+      "name": "Can delete версия",
       "content_type": 10,
-      "codename": "delete_contacts"
+      "codename": "delete_version"
     }
   },
   {
     "model": "auth.permission",
     "pk": 40,
     "fields": {
-      "name": "Can view контакт",
+      "name": "Can view версия",
       "content_type": 10,
-      "codename": "view_contacts"
+      "codename": "view_version"
     }
   },
   {
     "model": "auth.permission",
     "pk": 41,
     "fields": {
-      "name": "Can add версия",
+      "name": "Can add user",
       "content_type": 11,
-      "codename": "add_version"
+      "codename": "add_user"
     }
   },
   {
     "model": "auth.permission",
     "pk": 42,
     "fields": {
-      "name": "Can change версия",
+      "name": "Can change user",
       "content_type": 11,
-      "codename": "change_version"
+      "codename": "change_user"
     }
   },
   {
     "model": "auth.permission",
     "pk": 43,
     "fields": {
-      "name": "Can delete версия",
+      "name": "Can delete user",
       "content_type": 11,
-      "codename": "delete_version"
+      "codename": "delete_user"
     }
   },
   {
     "model": "auth.permission",
     "pk": 44,
     "fields": {
-      "name": "Can view версия",
+      "name": "Can view user",
       "content_type": 11,
-      "codename": "view_version"
-    }
-  },
-  {
-    "model": "auth.group",
-    "pk": 1,
-    "fields": {
-      "name": "Admin_b",
-      "permissions": [
-        1,
-        2,
-        3,
-        4
-      ]
-    }
-  },
-  {
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-      "password": "pbkdf2_sha256$600000$ZMXk6RVD3XJ17D66opKFXI$ZBusnofaNCwtZXJEulfAvR8mEmC1dUvBnbL9rz2MPko=",
-      "last_login": "2023-06-10T07:14:25.174Z",
-      "is_superuser": true,
-      "username": "anatoly_sh",
-      "first_name": "",
-      "last_name": "",
-      "email": "",
-      "is_staff": true,
-      "is_active": true,
-      "date_joined": "2023-05-09T10:11:40.239Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "auth.user",
-    "pk": 2,
-    "fields": {
-      "password": "pbkdf2_sha256$600000$Xlc7DjzpBtdwIX6udzGOaQ$OIiuNrnzEgsg61Rljbw/fBlKIFAY/elZthpEoHDPyJI=",
-      "last_login": "2023-06-09T11:44:28.258Z",
-      "is_superuser": false,
-      "username": "Test_user",
-      "first_name": "",
-      "last_name": "",
-      "email": "",
-      "is_staff": false,
-      "is_active": true,
-      "date_joined": "2023-06-09T07:19:43Z",
-      "groups": [
-        1
-      ],
-      "user_permissions": []
+      "codename": "view_user"
     }
   },
   {
@@ -1267,24 +774,24 @@
     "model": "contenttypes.contenttype",
     "pk": 4,
     "fields": {
-      "app_label": "auth",
-      "model": "user"
-    }
-  },
-  {
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": {
       "app_label": "contenttypes",
       "model": "contenttype"
     }
   },
   {
     "model": "contenttypes.contenttype",
-    "pk": 6,
+    "pk": 5,
     "fields": {
       "app_label": "sessions",
       "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "catalog",
+      "model": "category"
     }
   },
   {
@@ -1300,7 +807,7 @@
     "pk": 8,
     "fields": {
       "app_label": "catalog",
-      "model": "category"
+      "model": "blogrecord"
     }
   },
   {
@@ -1308,7 +815,7 @@
     "pk": 9,
     "fields": {
       "app_label": "catalog",
-      "model": "blogrecord"
+      "model": "contacts"
     }
   },
   {
@@ -1316,39 +823,31 @@
     "pk": 10,
     "fields": {
       "app_label": "catalog",
-      "model": "contacts"
+      "model": "version"
     }
   },
   {
     "model": "contenttypes.contenttype",
     "pk": 11,
     "fields": {
-      "app_label": "catalog",
-      "model": "version"
+      "app_label": "users",
+      "model": "user"
     }
   },
   {
     "model": "sessions.session",
-    "pk": "8wbneuvnox8f7l51iroscsoodd73jv9e",
+    "pk": "dczgpyuh24lpesuvv8cimc48e34ilqdy",
     "fields": {
-      "session_data": ".eJxVjE0OwiAQRu_C2hDIaAdcuvcMZMoMUjWQlHbVeHdp0oWuXvK-n00FWpcc1iZzmFhdlVWnXzdSfEnZA35SeVQda1nmadR7RR9p0_fK8r4d3b-DTC33tSRr0TtD5mwS206mhIl9MsACIwx4cYg--i7JddgBkAlMIkEQ9fkC67I4QA:1q7snp:kIRvDfQ9clLo8EwgQzKNNup7gOOe8NPbRLwLM8fQygU",
-      "expire_date": "2023-06-24T07:14:25.177Z"
+      "session_data": ".eJxVjMsOwiAQRf-FtSHDq4BL934DGRiQqoGktCvjv2uTLnR7zzn3xQJuaw3byEuYiZ2ZYKffLWJ65LYDumO7dZ56W5c58l3hBx382ik_L4f7d1Bx1G9tJURyQnowibIUnqwVSYGyCrBMyqCLLtqiDXiNjopzXgsQUmpbyuTZ-wO-GDa8:1qBevf:xwXZiORs0a8hvbO7O6NKrlZJxLGigRZRw7U4Az_fkWU",
+      "expire_date": "2023-07-04T17:14:07.350Z"
     }
   },
   {
     "model": "sessions.session",
-    "pk": "j1k48ztz8u1caopeg3faoicoh7n4ebzo",
+    "pk": "jl2e7wpqmdt2w3pe65c0z2i5box4o550",
     "fields": {
-      "session_data": ".eJxVjE0OwiAQRu_C2hDIaAdcuvcMZMoMUjWQlHbVeHdp0oWuXvK-n00FWpcc1iZzmFhdlVWnXzdSfEnZA35SeVQda1nmadR7RR9p0_fK8r4d3b-DTC33tSRr0TtD5mwS206mhIl9MsACIwx4cYg--i7JddgBkAlMIkEQ9fkC67I4QA:1q1qJc:e9KzGrKYNr_7_Cwe6nll-TAxgbY8SiuPYLLKp8ZF_Lg",
-      "expire_date": "2023-06-07T15:22:16.775Z"
-    }
-  },
-  {
-    "model": "sessions.session",
-    "pk": "n4q3qvdwolkiu5ih3q3natpqf1scw9y9",
-    "fields": {
-      "session_data": ".eJxVjE0OwiAQRu_C2hDIaAdcuvcMZMoMUjWQlHbVeHdp0oWuXvK-n00FWpcc1iZzmFhdlVWnXzdSfEnZA35SeVQda1nmadR7RR9p0_fK8r4d3b-DTC33tSRr0TtD5mwS206mhIl9MsACIwx4cYg--i7JddgBkAlMIkEQ9fkC67I4QA:1pwKKJ:Hl5hfkqaQurXYXE682IyDe3Zbd4caA1FstutQbib96k",
-      "expire_date": "2023-05-23T10:12:11.740Z"
+      "session_data": ".eJxVjMsOwiAQRf-FtSHj0Ae4dN9vIAwzSNXQpLQr478rSRe6veec-1I-7Fv2e5XVz6wuCp06_Y4U4kNKI3wP5bbouJRtnUk3RR-06mlheV4P9-8gh5q_NQFbjF00ANw5iwkxRR6BBiAR6C31wgFAwFhkiTKcJRnnrDFjQ-r9ARdkOI4:1qGKX1:Abc7tvcu12W5hIQUpB5ncHMddR-Q2mFqquYPbVSM-3Q",
+      "expire_date": "2023-07-17T14:27:59.080Z"
     }
   },
   {
@@ -1366,132 +865,4 @@
       "name": "Монеты Европы",
       "description": "Монеты, выпущенные в Европе"
     }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 1,
-    "fields": {
-      "name": "Монета 10 рублей 2003 года",
-      "description": "СПМД «Древние города России — Муром» (Артикул K11-89063",
-      "preview": "products/Артикул_K11-89063.png",
-      "category": 1,
-      "purchase_price": 150,
-      "creation_date": "2023-05-10T16:31:51.396Z",
-      "last_modified_date": "2023-05-22T17:11:30.078Z"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 2,
-    "fields": {
-      "name": "Монета 10 рублей 2000 года",
-      "description": "ММД «55 лет Великой Победы» (Артикул K11-88397)",
-      "preview": "products/Артикул_K11-88397.png",
-      "category": 1,
-      "purchase_price": 50,
-      "creation_date": "2023-05-10T16:32:36.805Z",
-      "last_modified_date": "2023-06-12T16:10:49.625Z"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 3,
-    "fields": {
-      "name": "Монета 2 евро 2023 года",
-      "description": "Германия «1275 лет со дня рождения Карла Великого» (Артикул M2-62505)",
-      "preview": "products/Артикул_M2-62505.png",
-      "category": 2,
-      "purchase_price": 325,
-      "creation_date": "2023-05-10T16:33:30.414Z",
-      "last_modified_date": "2023-06-12T19:52:24.800Z"
-    }
-  },
-  {
-    "model": "catalog.product",
-    "pk": 4,
-    "fields": {
-      "name": "Монета 10 евро 2002 года",
-      "description": "Испания «XIX зимние Олимпийские Игры 2002 в Солт-Лейк-Сити» (Артикул M2-62501)",
-      "preview": "products/Артикул_M2-62501.png",
-      "category": 2,
-      "purchase_price": 3500,
-      "creation_date": "2023-05-10T16:34:13.338Z",
-      "last_modified_date": "2023-06-14T20:01:36.682Z"
-    }
-  },
-  {
-    "model": "catalog.blogrecord",
-    "pk": 33,
-    "fields": {
-      "title": "Монета 2 евро",
-      "slug": "moneta-2-evro",
-      "content": "Монета 2 евро 2023 года G Германия «1275 лет со дня рождения Карла Великого»",
-      "preview": "blogrecord/Артикул_M2-62505_Owy6sVV.png",
-      "create_date": "2023-06-04T18:32:26.426Z",
-      "published": true,
-      "view_count": 11
-    }
-  },
-  {
-    "model": "catalog.blogrecord",
-    "pk": 34,
-    "fields": {
-      "title": "Монета 10 евро",
-      "slug": "moneta-10-evro",
-      "content": "Монета 10 евро 2002 года Испания «XIX зимние Олимпийские Игры 2002 в Солт-Лейк-Сити»",
-      "preview": "blogrecord/Артикул_M2-62501_P6JpHGy.png",
-      "create_date": "2023-06-04T18:34:48.720Z",
-      "published": true,
-      "view_count": 37
-    }
-  },
-  {
-    "model": "catalog.blogrecord",
-    "pk": 35,
-    "fields": {
-      "title": "Монета 10 рублей 2000",
-      "slug": "moneta-10-rublej-2000",
-      "content": "Монета 10 рублей 2000 года ММД «55 лет Великой Победы»",
-      "preview": "blogrecord/Артикул_K11-88397_ca6KYYl.png",
-      "create_date": "2023-06-04T18:37:32.848Z",
-      "published": true,
-      "view_count": 5
-    }
-  },
-  {
-    "model": "catalog.blogrecord",
-    "pk": 36,
-    "fields": {
-      "title": "Монета 10 рублей 2003",
-      "slug": "moneta-10-rublej-2003",
-      "content": "Монета 10 рублей 2003 года СПМД «Древние города России — Муром»",
-      "preview": "blogrecord/Артикул_K11-89063_wH1NfVu.png",
-      "create_date": "2023-06-04T18:38:18.746Z",
-      "published": true,
-      "view_count": 5
-    }
-  },
-  {
-    "model": "catalog.blogrecord",
-    "pk": 37,
-    "fields": {
-      "title": "test for slug",
-      "slug": "test-for-slug",
-      "content": "test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug; test for slug;",
-      "preview": "blogrecord/OLYMPUS_OPTICAL_CO.LTD_C4040Z_20040229_162005.jpg",
-      "create_date": "2023-06-04T19:44:40.330Z",
-      "published": true,
-      "view_count": 15
-    }
-  },
-  {
-    "model": "catalog.version",
-    "pk": 4,
-    "fields": {
-      "name": 4,
-      "version_number": 1,
-      "version_name": "sh1",
-      "version_is_active": true
-    }
   }
-]
