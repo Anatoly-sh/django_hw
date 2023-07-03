@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.forms import inlineformset_factory
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
@@ -86,9 +87,17 @@ class ProductDetailView(DetailView):
 '''
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, CreateView):
+    login_url = reverse_lazy('users:login')
+    redirect_field_name = None
     model = Product
     form_class = ProductForm
+
+    def form_valid(self, form):
+        product = form.save()
+        product.a_user = self.request.user
+        product.save()
+        return super().form_valid(form)
 
 
 '''
@@ -96,7 +105,9 @@ class ProductCreateView(CreateView):
 '''
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
+    login_url = reverse_lazy('users:login')
+    redirect_field_name = None
     model = Product
     form_class = ProductForm
     template_name = 'catalog/product_form_with_formset.html'
@@ -128,7 +139,9 @@ class ProductUpdateView(UpdateView):
 '''
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, DeleteView):
+    login_url = reverse_lazy('users:login')
+    redirect_field_name = None
     model = Product
     success_url = reverse_lazy('catalog:product_list')
 

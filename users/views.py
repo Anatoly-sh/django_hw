@@ -14,7 +14,7 @@ from users.models import User
 
 class RegisterView(CreateView):
     model = User
-    form_class = UserRegisterForm   # кастомное название
+    form_class = UserRegisterForm   # кастомное название (users.forms)
     success_url = reverse_lazy('catalog:index')
     template_name = 'users/register.html'
 

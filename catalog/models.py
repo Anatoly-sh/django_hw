@@ -3,8 +3,7 @@ from django.urls import reverse
 from django.utils.text import slugify
 from transliterate import translit
 
-
-NULLABLE = {'blank': True, 'null': True}
+from users.models import User, NULLABLE
 
 
 # Create your models here.
@@ -29,6 +28,7 @@ class Product(models.Model):
     purchase_price = models.IntegerField(verbose_name='Стоимость')
     creation_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     last_modified_date = models.DateTimeField(auto_now=True, verbose_name='Дата последнего изменения')
+    a_user = models.ForeignKey(User, verbose_name='авторизованный пользователь', on_delete=models.CASCADE, **NULLABLE)
 
     def __str__(self):
         return f'{self.name} / {self.purchase_price} : {self.category}'
