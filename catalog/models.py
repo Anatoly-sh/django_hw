@@ -23,12 +23,13 @@ class Category(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=150, verbose_name='Наименование')
     description = models.TextField(max_length=2000, verbose_name='Описание')
-    preview = models.ImageField(upload_to='products/', max_length=100, verbose_name='Изображение', **NULLABLE)
+    preview = models.ImageField(upload_to='product/', max_length=100, verbose_name='Изображение', **NULLABLE)
     category = models.ForeignKey(Category, verbose_name='Категория', on_delete=models.CASCADE)
     purchase_price = models.IntegerField(verbose_name='Стоимость')
     creation_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     last_modified_date = models.DateTimeField(auto_now=True, verbose_name='Дата последнего изменения')
     a_user = models.ForeignKey(User, verbose_name='авторизованный пользователь', on_delete=models.CASCADE, **NULLABLE)
+    published = models.BooleanField(default=False, verbose_name='Признак публикации')
 
     def __str__(self):
         return f'{self.name} / {self.purchase_price} : {self.category}'
@@ -37,6 +38,21 @@ class Product(models.Model):
         verbose_name = 'изделие'
         verbose_name_plural = 'изделия'
         ordering = ('name',)
+        permissions = [
+            (
+                'may_unpublish_product',
+                'may unpublish a product'
+            ),
+            (
+                'can_change_description_product',
+                'can change the description of any product'
+            ),
+            (
+                'can_change_category_product',
+                'can change the category of any product'
+            )
+        ]
+
 
     def get_absolute_url(self):
         return reverse('catalog:product_detail', kwargs={'pk': self.pk})

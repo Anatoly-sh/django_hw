@@ -13,6 +13,7 @@
 {#                <img class="rounded-circle" src="{{ MEDIA_URL }}{{ object.preview.url }}" alt="Generic placeholder image" width="140" height="140">#}
                 <p>{{ object.name }}</p>
                 <p>Категория: {{ object.category }}</p>
+                <p>Автор: {{ object.a_user }}</p>
                   <td>
                     {% for version in object.version_set.all %}
                         {% if version.version_is_active %}

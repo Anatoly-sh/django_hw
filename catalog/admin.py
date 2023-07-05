@@ -13,13 +13,13 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'purchase_price', 'category', 'a_user')
+    list_display = ('id', 'name', 'purchase_price', 'category', 'a_user', 'published')
     search_fields = ('name', 'description',)
     list_filter = ('category',)
 
 
 @admin.register(Version)
-class ProductAdmin(admin.ModelAdmin):
+class VersionAdmin(admin.ModelAdmin):
     list_display = ('name', 'version_number', 'version_name', 'version_is_active',)
     list_filter = ('name',)
 
