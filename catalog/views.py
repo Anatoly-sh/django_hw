@@ -1,5 +1,6 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.forms import inlineformset_factory
+from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -105,12 +106,22 @@ class ProductCreateView(LoginRequiredMixin, CreateView):
 '''
 
 
-class ProductUpdateView(LoginRequiredMixin, UpdateView):
+class ProductUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     login_url = reverse_lazy('users:login')
     redirect_field_name = None
     model = Product
+    permission_required = 'catalog.change_product'
     form_class = ProductForm
     template_name = 'catalog/product_form_with_formset.html'
+
+    # def get_form_class(self):
+    #     class_form = super().get_form_class()
+    #     class_form.update({'user': self.request.user})
+    #     return class_form
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs.update({'user': self.request.user})
+        return kwargs
 
     def get_success_url(self, *args, **kwargs):
         return reverse('catalog:product_update', args=[self.get_object().pk])
@@ -123,6 +134,12 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
         else:
             context_data['formset'] = VersionFormset(instance=self.object)
         return context_data
+
+    def get_object(self, queryset=None):
+        self.object = super().get_object(queryset)
+        if self.object.a_user != self.request.user and not self.request.user.is_staff:
+            raise Http404('Редактирование продукта доступно только его владельцу.')
+        return self.object
 
     def form_valid(self, form):
         context_data = self.get_context_data()

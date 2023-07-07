@@ -1,5 +1,6 @@
 from django import forms
 
+import catalog
 from catalog.models import Product, Version
 
 words_exclude = ['казино', 'криптовалюта', 'крипта', 'биржа', 'дешево', 'бесплатно', 'обман', 'полиция', 'радар']
@@ -14,6 +15,22 @@ class FormStyleMixin:
 
 
 class ProductForm(FormStyleMixin, forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user', None)
+        super().__init__(*args, **kwargs)
+        if self.user.is_staff is True:
+            self.fields['name'].widget.attrs['disabled'] = True
+            self.fields['description'].widget.attrs['disabled'] = True
+            self.fields['purchase_price'].widget.attrs['disabled'] = True
+            self.fields['preview'].widget.attrs['disabled'] = True
+
+        if self.user.has_perm('may_unpublish_product'):
+            del self.fields['published']
+        if self.user.has_perm('can_change_description_product'):
+            del self.fields['description']
+        if self.user.has_perm('can_change_category_product'):
+            del self.fields['category']
 
     class Meta:
         model = Product
