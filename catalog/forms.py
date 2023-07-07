@@ -24,13 +24,13 @@ class ProductForm(FormStyleMixin, forms.ModelForm):
             self.fields['description'].widget.attrs['disabled'] = True
             self.fields['purchase_price'].widget.attrs['disabled'] = True
             self.fields['preview'].widget.attrs['disabled'] = True
-
-        if self.user.has_perm('may_unpublish_product'):
-            del self.fields['published']
-        if self.user.has_perm('can_change_description_product'):
-            del self.fields['description']
-        if self.user.has_perm('can_change_category_product'):
-            del self.fields['category']
+# это уборка полей - в данном случае не подходит
+        # if self.user.has_perm('may_unpublish_product'):
+        #     del self.fields['published']
+        # if self.user.has_perm('can_change_description_product'):
+        #     del self.fields['description']
+        # if self.user.has_perm('can_change_category_product'):
+        #     del self.fields['category']
 
     class Meta:
         model = Product
