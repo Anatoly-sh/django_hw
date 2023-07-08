@@ -19,11 +19,15 @@ class ProductForm(FormStyleMixin, forms.ModelForm):
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user', None)
         super().__init__(*args, **kwargs)
+
+        # print(self.user.email)
+        # print(self.user.is_staff)
+
         if self.user.is_staff is True:
             self.fields['name'].widget.attrs['disabled'] = True
-            self.fields['description'].widget.attrs['disabled'] = True
             self.fields['purchase_price'].widget.attrs['disabled'] = True
             self.fields['preview'].widget.attrs['disabled'] = True
+
 # это уборка полей - в данном случае не подходит
         # if self.user.has_perm('may_unpublish_product'):
         #     del self.fields['published']

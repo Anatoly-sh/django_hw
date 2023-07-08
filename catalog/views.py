@@ -88,11 +88,26 @@ class ProductDetailView(DetailView):
 '''
 
 
-class ProductCreateView(LoginRequiredMixin, CreateView):
+class ProductCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     login_url = reverse_lazy('users:login')
     redirect_field_name = None
     model = Product
+    permission_required = 'catalog.add_product'
     form_class = ProductForm
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs.update({'user': self.request.user})
+        return kwargs
+
+    # def get_object(self, queryset=None):
+    #     self.object = super().get_object(queryset)
+    #
+    #     print(self.request.user.is_staff)
+    #
+    #     if self.request.user.is_staff is False:
+    #         raise Http404('Менеджер не может создавать продукты')
+    #     return self.object
 
     def form_valid(self, form):
         product = form.save()
@@ -114,10 +129,6 @@ class ProductUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView)
     form_class = ProductForm
     template_name = 'catalog/product_form_with_formset.html'
 
-    # def get_form_class(self):
-    #     class_form = super().get_form_class()
-    #     class_form.update({'user': self.request.user})
-    #     return class_form
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
         kwargs.update({'user': self.request.user})
@@ -162,7 +173,11 @@ class ProductDeleteView(LoginRequiredMixin, DeleteView):
     model = Product
     success_url = reverse_lazy('catalog:product_list')
 
-
+    def get_object(self, queryset=None):
+        self.object = super().get_object(queryset)
+        if self.object.a_user != self.request.user:
+            raise Http404('Удаление продукта доступно только его владельцу.')
+        return self.object
 # -------------------------------------------------------------------
 
 
